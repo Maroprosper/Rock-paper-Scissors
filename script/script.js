@@ -79,7 +79,7 @@ function reset(){
         history.go(0);
     }
     else{
-        history.back();
+        alert('Thanks for playing!!!');
     }
 }
 let buttons = document.querySelectorAll('button');
