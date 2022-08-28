@@ -74,14 +74,11 @@ function reset(){
     };
     alert('You\'ve concluded this round and ' + winner());
     
-    confirm('Do you want to play again?');
-    if(confirm){
-        history.go(0);
-    }
-    else if(!confirm){
-        alert('Thanks for playing!!!');
-        history.back();
-    }
+    confirm('Do you want to play again?') ? history.go(0) : no();
+}
+function no(){
+    alert("Thanks for playing!!!"); 
+    history.back();
 }
 let buttons = document.querySelectorAll('button');
 buttons.forEach(button => {button.addEventListener('click', (e) => { 
