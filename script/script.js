@@ -78,7 +78,7 @@ function reset(){
 }
 function no(){
     alert("Thanks for playing!!!"); 
-    history.back();
+    window.close();
 }
 let buttons = document.querySelectorAll('button');
 buttons.forEach(button => {button.addEventListener('click', (e) => { 
