@@ -78,8 +78,9 @@ function reset(){
     if(confirm){
         history.go(0);
     }
-    else{
+    else if(!confirm){
         alert('Thanks for playing!!!');
+        history.back();
     }
 }
 let buttons = document.querySelectorAll('button');
