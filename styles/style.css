@@ -29,7 +29,7 @@ img{
 .result{
     display: none;
     border: 0.2vw whitesmoke;
-    border-style:dashed solid dotted double;
+    border-style:dotted solid dashed double;
     padding: 10px;
     color: goldenrod;
     height:auto;

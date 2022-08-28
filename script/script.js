@@ -78,8 +78,8 @@ function reset(){
     if(confirm){
         history.go(0);
     }
-    else if(!confirm){
-        history.go(-1);
+    else{
+        history.back();
     }
 }
 let buttons = document.querySelectorAll('button');
