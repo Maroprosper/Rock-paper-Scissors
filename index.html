@@ -5,85 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS</title>
+    <link rel = "stylesheet" type="text/css" href="./styles/style.css">
+    <script src = "./script/script.js" defer></script>
 </head>
 <body>
-   <script>
-       let getComputerChoice = () => {
-          const choice = Math.floor(Math.random() * 3);
-          switch(choice){
-              case 0:
-                  return "rock";
-              break;
-              case 1:
-                  return "paper";
-              break;
-              case 2:
-                  return "scissors";
-              break;
-              default:
-                  return "Something went wrong, Try again!";
-          };
-       };
-       const getUserChoice = function(){
-           let answer = prompt("Kindly enter Rock, Paper or Scissors to play!", '');
-           return answer.toLowerCase();
-       };
-        function play(computer, user){
-            computer = getComputerChoice();
-            user = getUserChoice();
-            if(computer === user){
-                return "It is a tie, Try again!!!";
-            }
-            else if(computer === "rock" && user === "paper"){
-                return "Paper beats Rock, You win!!!";
-            }
-            else if(computer === "scissors" && user === "rock"){
-                return "Rock beats Scissors, You win!!!";
-            }
-            else if(computer === "paper" && user === "scissors"){
-                return "Scissors beats Paper, You win!!!";
-            }
-            else if(computer === "paper" && user === "rock"){
-                return "Paper beats Rock, You lose!!!";
-            }
-            else if(computer === "rock" && user === "scissors"){
-                return "Rock beats Scissors, You lose!!!";
-            }
-            else if(computer === "scissors" && user === "paper"){
-                return "Scissors beats Paper, You lose!!!";
-            }
-            else{
-                return "Something went horribly wrong, please try again.";
-            }
-       }
-       function game(){
-        var userScore = 0;
-        var computerScore = 0;
-           for(let i = 1; i <= 5; i++){
-               let value = play();
-               
-               if(value === "Paper beats Rock, You win!!!" || value === "Rock beats Scissors, You win!!!" || value === "Scissors beats Paper, You win!!!"){
-                   userScore += 1;
-               }
-           
-               if(value === "Paper beats Rock, You lose!!!" || value ==="Rock beats Scissors, You lose!!!" || value === "Scissors beats Paper, You lose!!!"){
-                   computerScore += 1;
-               } 
-            }
-           let winner = () => { if(userScore > computerScore){
-                return `You\`ve won the game  with ${userScore} points over the Computer\`s ${computerScore} points`;
-           }
-           else if(userScore < computerScore){
-                return `You\`ve lost the game  with ${userScore} points under the Computer\`s ${computerScore} points`;
-           }
-           else{
-                return `It\`s a tie!!! You scored ${userScore} equaling the computer\`s ${computerScore}`;
-           }
-         };
-        alert(winner());
-       (userScore > computerScore)? console.log("You won!!!!!!") : (userScore < computerScore)? console.log("You lose!!!!") : console.log("It`s a Tie!!!!");
-       }
-       console.log(game());
-   </script> 
+   <main>
+     <section class ="info">
+        <header>
+            <h1>Rock-Paper-Scissors</h1>
+        </header>
+        <div class = "inst">
+             <p>click on your desired option to play!!!</p>
+        </div>
+     </section>
+     <section class="content">
+        <section class="score">
+            <div>
+                <p id="user">Your Score: </p>
+            </div>
+            <div>
+                <p id="computer">Computer Score: </p>
+            </div>
+        </section>
+        <section class="winner">
+            <div class ="result">
+
+            </div>
+        </section>
+        <section class = "">
+            <div class = "answers">
+                <button id ="rock">
+                    <img src = "./images/rock.png" alt="image of a rock hand gesture">
+                </button>
+                <button id ="paper">
+                    <img src = "./images/paper.png" alt="image of a paper hand gesture">
+                </button>
+                <button id ="scissors">
+                    <img src = "./images/scissors.png" alt="image of a scissors hand gesture">
+                </button>
+            </div>
+        </section>
+     </section>
+     <section class ="footer">
+        <footer>
+            <p>Enjoy playing!!!</p>
+        </footer>
+     </section>
+   </main> 
 </body>
 </html>
